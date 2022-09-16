@@ -1,0 +1,107 @@
+.clearfix(){
+    *zoom: 1;
+    &::after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+.login{
+    padding: 10px;
+    .title{
+        color: #185972;
+    }
+
+    header{
+        height: 150px; //由absolute形成的高度塌陷，没法用形成BFC来解决
+        padding: 0 50px;
+        position: relative;
+        margin-bottom: 30px;
+        .logo{
+            position: absolute;
+            width: 120px;
+            left: 70px;
+            top: 20px;
+        }
+        .title{
+            position: absolute;
+            height: 100px;
+            right: 80px;
+            top: 40px;
+            font-weight: bolder
+
+        }
+        
+    }
+    
+    .verify-wrap{
+        border-top: 1px solid #eee;
+        margin: 6px auto 24px;
+        padding-top: 6px;
+        display: flex;
+        justify-content: space-between;
+        .verify-code{
+            width: 150px;
+        }
+        .verify-get{
+            font-size: 14px;
+            width: 110px;
+            padding: 5px 5px;
+            background-color: transparent;
+            color: #3785a4;
+        }
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 50px;
+        .other {
+            display: block;
+            color: #999;
+            position: relative;
+            &::after{
+                display: block;
+                content: '';
+                width: 100px;
+                height: 1px;
+                background-color: #999;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &::before{
+                display: block;
+                content: '';
+                width: 100px;
+                height: 1px;
+                background-color: #999;
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+    
+        }
+        .login-type{
+            display: flex;
+            justify-content: space-around;
+            width: 140px;
+            margin: 20px auto 40px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+            .clearfix()
+        }
+        .policy{
+            display: block;
+            padding: 0 20px;
+            color: #999;
+            font-size: 12px;
+            
+        }
+    }
+
+    
+}
